@@ -1,0 +1,130 @@
+@import 'config';
+
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  @include easeOut;
+
+  .btn-line {
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background: set-text-color($primary-color);
+      @include easeOut;
+  }
+
+  &.close {
+      transform: rotate(180deg);
+
+      .btn-line {
+          &:nth-child(1) {
+              transform: rotate(45deg) translate(5px, 5px);
+          }
+          &:nth-child(2) {
+              opacity: 0;
+          }
+          &:nth-child(3) {
+              transform: rotate(-45deg) translate(7px, -6px);
+          }
+
+      }
+  }
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 1;
+  visibility: hidden;
+
+  &.show {
+      visibility: visible;
+  }
+
+  &-branding,
+  &-nav {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      width: 50%;
+      height: 100vh;
+      overflow: hidden;
+      .icons {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+  }
+
+  &-nav {
+      margin: 0;
+      padding: 0;
+      background: darken($primary-color, 5);
+      list-style: none;
+      transform: translate3d(0, -100%, 0);
+      @include easeOut;
+
+      &.show {
+          transform: translate3d(0, 0, 0);
+      }
+  }
+
+  &-branding {
+      background: $primary-color;
+      @include easeOut;
+      transform: translate3d(0, 100%, 0);
+
+      &.show {
+          transform: translate3d(0, 0, 0);
+      }
+
+      .portrait {
+          width: 250px;
+          height: 250px;
+          background: url('../assets/images/rsz_2sacc_dc_2018-9255-zf-8713-28305-1-005.jpg');
+          border-radius: 50%;
+          border: solid 7px $circle-border-color;
+      }
+  }
+
+  .nav-item {
+      transform: translate3d(600px, 0, 0);
+      @include easeOut;
+
+      &.show {
+          transform: translate3d(0, 0, 0);
+      }
+
+      &.current > a {
+          color: $secondary-color;
+      }
+  }
+
+  .nav-link {
+      display: inline-block;
+      position: relative;
+      font-size: 30px;
+      text-transform: uppercase;
+      padding: 1rem 0;
+      font-weight: 300;
+      color: set-text-color($primary-color);
+      text-decoration: none;
+      @include easeOut;
+
+      &:hover {
+          color: $secondary-color;
+      }
+  }
+}
+
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}){
+      transition-delay: $x * 0.1s;
+  }
+}
+
