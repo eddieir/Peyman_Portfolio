@@ -1,0 +1,23 @@
+.contact {
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1rem;
+}
+
+.container {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jumbotron {
+  border-radius: 15px;
+  width: auto;
+  height: auto;
+  margin-bottom: 2rem;
+  background: rgba(lighten(#444, 2), 0.5);
+  border-bottom: rgb(40, 8, 245) 5px solid;
+  color: #fff;
+  padding: 30px;
+}
+

@@ -1,0 +1,99 @@
+<body id="bg-img">
+  <app-header></app-header>
+
+  <main id="contact">
+    <h1 class="lg-heading">
+      Connect With <span style="color:rgb(240, 80, 106)">Me</span>
+    </h1>
+    <br>
+    <h1 class="lg-heading">
+      <div class="icons">
+        <a href="mailto:admin@hyochangkim.xyz">
+          <i class="fa fa-envelope-o"></i>
+        </a>
+      </div>
+      <div class="icons">
+        <a href="https://twitter.com/hyhyisso" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/hyochangkim/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <div class="icons">
+        <a href="https://github.com/hckim16" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </h1>
+
+    <!--
+      <div class="icons">
+        <a href="https://twitter.com/hyhyisso" target="_blank">
+          <i class="fab fa-twitter fa-3x"></i>
+        </a>
+      </div>
+      <div class="icons">
+        <a href="https://www.linkedin.com/in/hyochangkim/" target="_blank">
+          <i class="fab fa-linkedin fa-3x"></i>
+        </a>
+      </div>
+      <div class="icons">
+        <a href="https://github.com/hckim16" target="_blank">
+          <i class="fab fa-github fa-3x"></i>
+        </a>
+      </div>
+<br>
+<br>
+<br>
+
+      <div class="contact">
+        <div class="container">
+          <div class="jumbotron">
+            <h3><i class="fa fa-envelope-o fa-2x" style="margin-right: 1rem;"></i>Send me an Email!</h3>
+            <br>
+            <form (ngSubmit)="onSubmit()" #contact [ngFormOptions]="{ updateOn: 'submit'}">
+              <div class="form-group">
+                <i class="fa fa-user"></i>
+                <label for="name"></label>
+                <input required [(ngModel)]="model.name" name="name" #name="ngModel" id="name" type="text" class="form-control" placeholder="Your name">
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                  Name is required
+                </div>
+              </div>
+              <div class="form-group">
+                <i class="fa fa-envelope-o"></i>
+                <label for="emailAddress"></label>
+                <input required [(ngModel)]="model.emailAddress" name="emailAddress" #emailAddress="ngModel" id="emailAddress" type="email" class="form-control" placeholder="Your email address">
+                <div [hidden]="emailAddress.valid || emailAddress.pristine" class="alert alert-danger">
+                  Email Address is required
+                </div>
+              </div>
+              <div class="form-group">
+                <i class="fa fa-tag"></i>
+                <label for="subject"></label>
+                <input required [(ngModel)]="model.subject" name="subject" #subject="ngModel" id="subject" type="text" class="form-control" placeholder="Subject of your email">
+                <div [hidden]="subject.valid || subject.pristine" class="alert alert-danger">
+                  Subject is required
+                </div>
+              </div>
+              <div class="form-group">
+                <i class="fa fa-pencil"></i>
+                <label for="message"></label>
+                <textarea required [(ngModel)]="model.message" name="message" #message="ngModel" id="message" class="form-control" placeholder="Your Message to me"></textarea>
+                <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
+                  Message is required
+                </div>
+              </div>
+              <button type="submit" class="button btn-sucess">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    -->
+
+  </main>
+  <app-footer></app-footer>
+</body>
