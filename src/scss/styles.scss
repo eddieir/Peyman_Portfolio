@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
-@import "../../node_modules/bootstrap/scss/bootstrap-reboot";
-@import "../../node_modules/bootstrap/scss/bootstrap-grid";
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../node_modules/bootstrap/dist/css/bootstrap.css";
 
 
@@ -159,6 +159,7 @@ main {
 .button {
   padding: 10px 20px;
   margin-right: 1rem;
+  margin-left: 1rem;
   margin-bottom: 1rem;
   font-size: 14px;
   text-align: center;
